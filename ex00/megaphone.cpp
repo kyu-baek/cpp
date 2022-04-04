@@ -9,11 +9,10 @@ int	main(int argc, char **argv)
 	{
 		for (int i = 1; i < argc; i++)
 		{
-			std::string str(argv[i]);
-			int len = str.size();
-			for (int j = 0; j < len; j++)
-				str[j] = std::toupper(str[j]);
-			std::cout << str << " ";
+			std::string s(argv[i]);
+			for (int j = 0; j < s.length(); j++)
+				s[j] = std::toupper(s[j]);
+			std::cout << s << " ";
 		}
 		std::cout << std::endl;
 	}

@@ -19,29 +19,17 @@ int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
 
-int	Account::getNbAccounts( void )
-{
-	return (_nbAccounts);
-}
+int	Account::getNbAccounts( void )  { return (_nbAccounts);	}
 
-int	Account::getTotalAmount( void )
-{
-	return (Account::_totalAmount);
-}
+int	Account::getTotalAmount( void ) { return (_totalAmount);	}
 
-int	Account::getNbDeposits( void )
-{
-	return (Account::_totalNbDeposits);
-}
+int	Account::getNbDeposits( void ) { return (_totalNbDeposits); }
 
-int	Account::getNbWithdrawals( void )
-{
-	return (Account::_totalNbWithdrawals);
-}
+int	Account::getNbWithdrawals( void ) {	return (_totalNbWithdrawals); }
 
 void	Account::displayAccountsInfos( void )
 {
-	Account::_displayTimestamp();
+	_displayTimestamp();
 	std::cout << " accounts:" << getNbAccounts() << ";";
 	std::cout << "total:" << getTotalAmount() << ";";
 	std::cout << "deposits:" << getNbDeposits() << ";";
@@ -49,16 +37,16 @@ void	Account::displayAccountsInfos( void )
 }
 
 Account::Account(int initial_deposit) :
-	_accountIndex(Account::_nbAccounts++),
+	_accountIndex(_nbAccounts++),
 	_amount(initial_deposit),
 	_nbDeposits(0),
 	_nbWithdrawals(0)
 {
-	Account::_displayTimestamp();
+	_displayTimestamp();
 	std::cout << " index:" << _accountIndex << ";";
 	std::cout << "amount:" << _amount << ";";
 	std::cout << "created" << std::endl;
-	Account::_totalAmount += initial_deposit;
+	_totalAmount += initial_deposit;
 }
 
 
@@ -78,11 +66,11 @@ time 함수가 돌려주는 time_t의 값은 시스템에 따라 32비트나 64�
 */
 void	Account::makeDeposit(int deposit)
 {
-	Account::_amount += deposit;
-	Account::_totalAmount += deposit;
-	Account::_nbDeposits += 1;
-	Account::_totalNbDeposits += 1;
-	Account::_displayTimestamp();
+	_amount += deposit;
+	_totalAmount += deposit;
+	_nbDeposits += 1;
+	_totalNbDeposits += 1;
+	_displayTimestamp();
 	std::cout << " index:" << _accountIndex << ";";
 	std::cout << "p_amount:" << _amount - deposit << ";";
 	std::cout << "deposit:" << deposit << ";";
@@ -94,7 +82,7 @@ void	Account::makeDeposit(int deposit)
 bool	Account::makeWithdrawal(int withdrawal)
 {
 	_amount -= withdrawal;
-	Account::_displayTimestamp();
+	_displayTimestamp();
 	std::cout << " index:" << _accountIndex << ";";
 	std::cout << "p_amount:" << _amount + withdrawal << ";";
 	if (!checkAmount())
@@ -107,8 +95,8 @@ bool	Account::makeWithdrawal(int withdrawal)
 	std::cout << "withdrawal:" << withdrawal << ";";
 	std::cout << "amount:" << _amount << ";";
 	std::cout << "nb_withdrawals:" << _nbWithdrawals << std::endl;
-	Account::_totalAmount -= withdrawal;
-	Account::_totalNbWithdrawals++;
+	_totalAmount -= withdrawal;
+	_totalNbWithdrawals++;
 	return (true);
 }
 
@@ -121,7 +109,7 @@ int	Account::checkAmount( void ) const
 
 void	Account::displayStatus(void) const
 {
-	Account::_displayTimestamp();
+	_displayTimestamp();
 	std::cout << " index:" << _accountIndex << ";";
 	std::cout << "amount:" << _amount << ";";
 	std::cout << "deposits:" << _nbDeposits << ";";

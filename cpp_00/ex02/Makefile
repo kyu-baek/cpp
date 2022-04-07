@@ -12,7 +12,8 @@
 
 NAME		= accounts_log
 CC			= clang++
-FLAG		= -Wall -Wextra -Werror -std=c++98
+FLAG		= -Wall -Wextra -Werror
+# FLAG		= -Wall -Wextra -Werror -std=c++98
 SRCS		= tests.cpp \
 				Account.cpp \
 

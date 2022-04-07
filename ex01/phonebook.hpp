@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 17:10:44 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/05 22:07:24 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/07 17:31:41 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include <string>
 
-# define SIZE 3
+# define SIZE 8
 
 class Contact
 {
@@ -30,25 +30,13 @@ public:
 	void		set_input(void);
 	std::string	get_input(std::string status);
 	void		get_phonebook(int i) const;
-
-	// std::string	get_first_name(void) const;
-	// std::string	get_last_name(void) const;
-	// std::string	get_nickname(void) const;
-	// std::string	get_phone_number(void) const;
-	// std::string	get_darkest_secret(void) const;
-	// void		display(void) const;
 };
 
 class PhoneBook
 {
 private:
 	Contact	_contacts[SIZE];
-	uint	_count;
-
-	// bool	_valid_contacts_index(int index) const;
-	// void	_set_contact(Contact *contact);
-	// Contact *_get_contact(uint index) const;
-
+	int		_count;
 	
 public:
 	void	add(void);

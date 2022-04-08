@@ -5,17 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/08 15:41:20 by kbaek             #+#    #+#              #
-#    Updated: 2022/04/08 18:57:25 by kbaek            ###   ########.fr        #
+#    Created: 2022/04/08 18:04:08 by kbaek             #+#    #+#              #
+#    Updated: 2022/04/08 18:54:58 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= zombie
+
+NAME		= brain
 CC			= clang++
 FLAG		= -Wall -Wextra -Werror -std=c++98
-SRCS		= main.cpp \
-			zombieHorde.cpp \
-			Zombie.cpp \
+SRCS		= main.cpp
 
 
 OBJS		= $(SRCS:.cpp=.o)

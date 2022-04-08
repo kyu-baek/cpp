@@ -5,17 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/08 15:41:20 by kbaek             #+#    #+#              #
-#    Updated: 2022/04/08 18:57:25 by kbaek            ###   ########.fr        #
+#    Created: 2022/04/08 18:57:34 by kbaek             #+#    #+#              #
+#    Updated: 2022/04/08 18:59:39 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= zombie
+NAME		= weapon
 CC			= clang++
 FLAG		= -Wall -Wextra -Werror -std=c++98
 SRCS		= main.cpp \
-			zombieHorde.cpp \
-			Zombie.cpp \
+			Weapon.cpp \
+			HumanA.cpp \
+			HumanB.cpp \
 
 
 OBJS		= $(SRCS:.cpp=.o)

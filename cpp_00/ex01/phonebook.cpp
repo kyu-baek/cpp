@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 17:16:24 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/07 17:31:00 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/08 18:50:00 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,8 +100,8 @@ void	PhoneBook::_print_phonebook(void) const
 		}
 		if (command == "")
 			std::cout << " can't be empty!" << std::endl;
-		else if (command.size() > 1 || (num = atoi(command.c_str())) > SIZE)
-			std::cout << " can't be more than 8!" << std::endl;
+		else if (command.size() > 1 || (num = atoi(command.c_str())) > SIZE || num > _count || num == 0)
+			std::cout << " it's wrong index!" << std::endl;
 		else
 		{
 			_contacts[num - 1].get_phonebook(num);

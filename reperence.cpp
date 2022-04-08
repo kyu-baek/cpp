@@ -16,7 +16,8 @@ int main()
 	std::cout << data << std::endl;
 	//data 변수에 대한 참조자 선언
 	int &ref = data;
-
+	std::cout << &data << std::endl;
+	std::cout << &ref << std::endl;
 	//참조자의 값을 변경하면 원본도 변경됨
 	ref = 20;
 	std::cout << data << std::endl;

@@ -6,14 +6,15 @@
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 14:33:55 by kbaek             #+#    #+#              #
-#    Updated: 2022/04/10 14:34:15 by kbaek            ###   ########.fr        #
+#    Updated: 2022/04/10 16:14:31 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= replace
+NAME		= harl
 CC			= clang++
 FLAG		= -Wall -Wextra -Werror -std=c++98
-SRCS		= main.cpp
+SRCS		= main.cpp \
+			Harl.cpp \
 
 
 OBJS		= $(SRCS:.cpp=.o)

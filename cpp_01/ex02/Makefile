@@ -6,14 +6,13 @@
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 18:04:08 by kbaek             #+#    #+#              #
-#    Updated: 2022/04/08 18:54:58 by kbaek            ###   ########.fr        #
+#    Updated: 2022/04/12 20:57:47 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
 NAME		= brain
-CC			= clang++
-FLAG		= -Wall -Wextra -Werror -std=c++98
+CC			= c++
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 SRCS		= main.cpp
 
 

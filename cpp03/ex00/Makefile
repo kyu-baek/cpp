@@ -5,16 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/07 17:31:24 by kbaek             #+#    #+#              #
-#    Updated: 2022/04/12 20:57:11 by kbaek            ###   ########.fr        #
+#    Created: 2022/04/10 14:33:55 by kbaek             #+#    #+#              #
+#    Updated: 2022/04/12 20:55:49 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= phonebook
+NAME		= a.out
 CC			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 SRCS		= main.cpp \
-			PhoneBook.cpp \
+
+
 
 OBJS		= $(SRCS:.cpp=.o)
 

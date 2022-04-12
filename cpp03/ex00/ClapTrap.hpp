@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 15:13:07 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/12 18:19:43 by kbaek            ###   ########.fr       */
+/*   Created: 2022/04/12 20:06:52 by kbaek             #+#    #+#             */
+/*   Updated: 2022/04/12 20:11:52 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+# include <iostream>
 
-int main(int argc, char **argv)
-{
-	Harl harl;
+class ClapTrap {
 
-	if (argc != 2)
-	{
-		std::cout << "Error : Should put ONE LEVEL you want" << std::endl;
-		return (1);
-	}
-	harl.complain(argv[1]);
-	return (0);
-}
+private:
+
+std::string _name;
+int			_hit;
+int			_energy;
+int			_damage;
+
+public:
+	void attack(const std::string& target);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
+	ClapTrap(void);
+	~ClapTrap(void);
+};
+
+#endif

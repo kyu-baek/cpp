@@ -6,14 +6,13 @@
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 21:01:53 by kbaek             #+#    #+#              #
-#    Updated: 2022/04/07 21:59:18 by kbaek            ###   ########.fr        #
+#    Updated: 2022/04/12 20:57:28 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= accounts_log
-CC			= clang++
-FLAG		= -Wall -Wextra -Werror
-# FLAG		= -Wall -Wextra -Werror -std=c++98
+CC			= c++
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 SRCS		= tests.cpp \
 				Account.cpp \
 

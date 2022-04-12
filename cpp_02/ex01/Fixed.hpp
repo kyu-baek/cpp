@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/08 19:50:55 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/12 18:04:35 by kbaek            ###   ########.fr       */
+/*   Created: 2022/04/10 17:41:19 by kbaek             #+#    #+#             */
+/*   Updated: 2022/04/12 19:08:51 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		WEAPON_HPP
-#define		WEAPON_HPP
-#include <iostream>
+#ifndef		FIXED_HPP
+# define	FIXED_HPP
+# include <cmath>
+# include <iostream>
 
-class Weapon
-{
-private:
-	std::string _type;
+class Fixed {
 public:
-	Weapon(std::string type);
-	~Weapon();
-	const std::string	&getType(void);
-	void				setType(std::string type);
+	Fixed(void);
+	Fixed(const int fix);
+	Fixed(const float fix);
+	Fixed(const Fixed& fix);
+	~Fixed(void);
+	Fixed& operator=(const Fixed &fix);
+	
+	int		toInt(void) const;
+	float	toFloat( void ) const;
+
+private:
+	int	_value;
+	static const int	_bits = 8;
 };
 
+std::ostream& operator<<(std::ostream& output, const Fixed &fix);
 
 #endif

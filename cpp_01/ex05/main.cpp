@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 15:13:07 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/10 16:03:14 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/12 18:18:25 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int main()
 	harl.complain("WARNING");
 	harl.complain("DEBUG");
 	harl.complain("ERROR");
-	harl.complain("TEST");
 
-  return (0);
+	return (0);
 }

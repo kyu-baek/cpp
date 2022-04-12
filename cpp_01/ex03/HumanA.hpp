@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 20:52:37 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/08 21:33:13 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/12 18:04:18 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 #ifndef		HUMANA_HPP
 # define	HUMANA_HPP
-
-# include <iostream>
 # include "Weapon.hpp"
 
 class HumanA

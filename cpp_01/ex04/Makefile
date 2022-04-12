@@ -6,13 +6,13 @@
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 14:33:55 by kbaek             #+#    #+#              #
-#    Updated: 2022/04/10 14:34:15 by kbaek            ###   ########.fr        #
+#    Updated: 2022/04/12 20:58:02 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= replace
-CC			= clang++
-FLAG		= -Wall -Wextra -Werror -std=c++98
+CC			= c++
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 SRCS		= main.cpp
 
 

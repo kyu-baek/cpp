@@ -6,14 +6,13 @@
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 15:41:20 by kbaek             #+#    #+#              #
-#    Updated: 2022/04/08 16:40:11 by kbaek            ###   ########.fr        #
+#    Updated: 2022/04/12 20:56:38 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= zombie
-CC			= clang++
-FLAG		= -Wall -Wextra -Werror
-# FLAG		= -Wall -Wextra -Werror -std=c++98
+CC			= c++
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 SRCS		= main.cpp \
 				newZombie.cpp \
 				randomChump.cpp \

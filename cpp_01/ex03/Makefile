@@ -6,13 +6,13 @@
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 18:57:34 by kbaek             #+#    #+#              #
-#    Updated: 2022/04/08 18:59:39 by kbaek            ###   ########.fr        #
+#    Updated: 2022/04/12 20:57:55 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= weapon
-CC			= clang++
-FLAG		= -Wall -Wextra -Werror -std=c++98
+CC			= c++
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 SRCS		= main.cpp \
 			Weapon.cpp \
 			HumanA.cpp \

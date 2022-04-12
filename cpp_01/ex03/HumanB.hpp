@@ -6,14 +6,12 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 20:56:26 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/08 21:22:59 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/12 18:04:29 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef		HUMANB_HPP
 # define	HUMANB_HPP
-
-# include <iostream>
 # include "Weapon.hpp"
 
 class HumanB

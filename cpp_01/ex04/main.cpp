@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 14:32:28 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/10 14:44:26 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/12 18:17:12 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int main(int argc, char **argv)
 		}
 
 		std::string	outfile_name = argv[1];
-		// outfile_name = outfile_name.substr(0, outfile_name.find("."));
 		outfile_name += ".replace";
 		std::fstream outfile(outfile_name, std::ios::out | std::ios::trunc);
 		if (!outfile.is_open())

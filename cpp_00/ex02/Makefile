@@ -6,7 +6,7 @@
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 21:01:53 by kbaek             #+#    #+#              #
-#    Updated: 2022/04/12 20:57:28 by kbaek            ###   ########.fr        #
+#    Updated: 2022/04/12 21:38:07 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJS		= $(SRCS:.cpp=.o)
 all:	$(NAME)
 
 $(NAME): $(OBJS)
-				$(CC) $(FLAG) -o $(NAME) $(OBJS)
+				$(CC) $(CPPFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 				@rm -rf $(OBJS)

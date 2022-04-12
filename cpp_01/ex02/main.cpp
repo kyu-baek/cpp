@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:04:34 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/12 18:11:40 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/12 21:37:26 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ int main(void)
 	std::cout << "The value of the string variable		: " << brain << std::endl;
 	std::cout << "The value pointed to by stringPTR		: " << *stringPTR << std::endl;
 	std::cout << "The value pointed to by stringREF		: " << stringREF << std::endl;
-	while (1);
 	return (0);
 }

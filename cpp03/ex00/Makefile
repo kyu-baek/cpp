@@ -6,7 +6,7 @@
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 14:33:55 by kbaek             #+#    #+#              #
-#    Updated: 2022/04/12 21:38:07 by kbaek            ###   ########.fr        #
+#    Updated: 2022/04/14 21:39:24 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME		= a.out
 CC			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 SRCS		= main.cpp \
+				ClapTrap.cpp \
 
 
 

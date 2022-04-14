@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 20:06:16 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/12 20:06:48 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/14 19:49:52 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 int main()
 {
+	ClapTrap kbaek("kbaek");
+	ClapTrap hanna("hanna");
+	ClapTrap bokim("bokim");
+	
 	
 }

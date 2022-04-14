@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 14:32:28 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/12 18:17:12 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/14 15:51:12 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,15 @@ int main(int argc, char **argv)
 		std::cout << "Wrong format argument..." << std::endl;
 	else
 	{
+		if (argv[2])
+		{
+			std::string a(argv[2]);
+			if (a == "")
+			{
+				std::cout << "Error: no replace word" << std::endl;
+				return (1);
+			}
+		}
 		std::fstream infile(argv[1], std::ios::in);
 		if (!infile.is_open())
 		{

@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 20:06:52 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/14 22:15:09 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/14 22:02:02 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ public:
 	void 			takeDamage(unsigned int amount);
 	void 			beRepaired(unsigned int amount);
 	unsigned int 	GetDamage(void);
-	void			printStatus(void);
+	void			printStatus();
 	void			SetAttackDamage(unsigned int hit);
 };
 

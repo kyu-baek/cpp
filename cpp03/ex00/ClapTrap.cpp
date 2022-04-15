@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:20:23 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/14 22:14:58 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/15 16:55:51 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,11 @@ ClapTrap::~ClapTrap(void)
 	std::cout << _name  << " : ClapTrap destructor called " << std::endl;
 }
 
+void	ClapTrap::SetAttackDamage(unsigned int da)
+{
+	_damage = da;
+}
+
 void ClapTrap::attack(const std::string& target)
 {
 	if (_energy > 0)
@@ -56,8 +61,10 @@ void ClapTrap::attack(const std::string& target)
 		std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _damage << " points of damage!" << std::endl;
 	}
 	else
+	{
 		std::cout << "ClapTrap " << _name << " has no energy, so they can not do anything!" << std::endl;
-	
+		SetAttackDamage(0);
+	}
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
@@ -86,13 +93,13 @@ unsigned int ClapTrap::GetDamage(void)
 	return (_damage);
 }
 
+unsigned int ClapTrap::GetHitPoint(void)
+{
+	return (_hit);
+}
+
 void	ClapTrap::printStatus()
 {
 	std::cout << "****ClapTrap " << _name << " has " << _hit << " Hit points, " << _energy << \
 			" Energy points, " << _damage << " Attack damage ****" << std::endl;
-}
-
-void	ClapTrap::SetAttackDamage(unsigned int da)
-{
-	_damage = da;
 }

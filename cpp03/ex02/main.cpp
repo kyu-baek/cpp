@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 20:06:16 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/15 19:39:11 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/18 21:22:43 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main()
 	while (hanna.GetHitPoint() && kbaek.GetDamage())
 	{
 		kbaek.attack("hanna");
-		if (hanna.GetGuardGate() != true)
+		if (hanna.GetGuardGate() != true && kbaek.GetStatus() && kbaek.SetStatus())
 			hanna.takeDamage(kbaek.GetDamage());
 	}
 	std::cout << std::endl;
@@ -47,7 +47,7 @@ int main()
 	
 	std::cout << "\n다시 공격 시작" << std::endl;
 	kbaek.attack("hanna");
-	if (hanna.GetGuardGate() != true)
+	if (hanna.GetGuardGate() != true && kbaek.GetStatus() && kbaek.SetStatus())
 		hanna.takeDamage(kbaek.GetDamage());
 
 	std::cout << std::endl;

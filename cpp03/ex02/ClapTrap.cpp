@@ -6,14 +6,14 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:20:23 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/15 16:55:38 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/18 21:23:16 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void)
-	: _name("test"), _hit(10), _energy(10), _damage(0)
+	: _name("test"), _hit(10), _energy(10), _damage(0), status(0)
 {
 	std::cout << "ClapTrap default constructor called" << std::endl;
 }
@@ -53,10 +53,21 @@ void	ClapTrap::SetAttackDamage(unsigned int da)
 	_damage = da;
 }
 
+int		ClapTrap::SetStatus(void)
+{
+	if (status == 1)
+	{
+		status = 0;
+		return (1);
+	}
+	return (0);
+}
+
 void ClapTrap::attack(const std::string& target)
 {
 	if (_energy > 0)
 	{
+		status = 1;
 		_energy -= 1;
 		std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _damage << " points of damage!" << std::endl;
 	}
@@ -96,6 +107,11 @@ unsigned int ClapTrap::GetDamage(void)
 unsigned int ClapTrap::GetHitPoint(void)
 {
 	return (_hit);
+}
+
+int ClapTrap::GetStatus(void)
+{
+	return (status);
 }
 
 void	ClapTrap::printStatus()

@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 20:06:52 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/15 15:29:52 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/18 21:20:54 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ protected:
 	unsigned int	_hit;
 	unsigned int	_energy;
 	unsigned int	_damage;
+	int 			status;
 
 public:
 	ClapTrap(void);
@@ -35,8 +36,11 @@ public:
 	void 			beRepaired(unsigned int amount);
 	unsigned int 	GetDamage(void);
 	unsigned int	GetHitPoint(void);
+	int				GetStatus(void);
 	void			printStatus();
 	void			SetAttackDamage(unsigned int hit);
+	int				SetStatus(void);
+
 };
 
 #endif

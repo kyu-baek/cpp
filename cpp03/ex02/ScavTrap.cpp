@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 22:08:30 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/15 17:15:12 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/18 21:15:02 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ void ScavTrap::attack(const std::string& target)
 	if (_energy > 0)
 	{
 		_energy -= 1;
+		status = 1;
 		std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _damage << " points of damage!" << std::endl;
 	}
 	else

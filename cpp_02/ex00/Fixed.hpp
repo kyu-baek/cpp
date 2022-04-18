@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 17:41:19 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/12 16:37:04 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/18 13:35:11 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
 	void setRawBits( int const raw );
 private:
 	int	_value;
-	static const int	_bits = 8;
+	static const int	_bit;
 };
 
 #endif

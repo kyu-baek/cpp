@@ -6,11 +6,13 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 17:53:54 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/12 16:36:30 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/18 13:35:57 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+const int	Fixed::_bits = 8;
 
 Fixed::Fixed(void) : _value(0)
 {}

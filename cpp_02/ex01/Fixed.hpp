@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 17:41:19 by kbaek             #+#    #+#             */
-/*   Updated: 2022/04/12 19:08:51 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/04/18 13:35:27 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 
 private:
 	int	_value;
-	static const int	_bits = 8;
+	static const int	_bits;
 };
 
 std::ostream& operator<<(std::ostream& output, const Fixed &fix);

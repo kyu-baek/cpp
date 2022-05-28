@@ -6,7 +6,7 @@
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/19 19:41:58 by kbaek             #+#    #+#              #
-#    Updated: 2022/05/28 20:18:23 by kbaek            ###   ########.fr        #
+#    Updated: 2022/05/28 22:04:40 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS		= main.cpp \
 				srcs/Animal.cpp \
 				srcs/WrongAnimal.cpp \
 				srcs/WrongCat.cpp \
+				srcs/Brain.cpp \
 
 
 

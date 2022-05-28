@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 20:24:28 by kbaek             #+#    #+#             */
-/*   Updated: 2022/05/28 20:53:01 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/05/28 22:36:23 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 class Brain {
 private:
-	std::string ideas[100];
+	std::string _ideas[100];
 public:
 	Brain(void);
 	Brain(const Brain &brain);
@@ -24,7 +24,7 @@ public:
 	~Brain(void);
 
 	std::string getIdeas(void) const;
-	void setIdeas(std::string *ideas);
+	void setIdeas(std::string ideas);
 
 };
 

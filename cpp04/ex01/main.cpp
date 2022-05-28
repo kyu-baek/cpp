@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/28 19:18:24 by kbaek             #+#    #+#             */
-/*   Updated: 2022/05/28 19:19:31 by kbaek            ###   ########.fr       */
+/*   Created: 2022/05/26 16:18:44 by kbaek             #+#    #+#             */
+/*   Updated: 2022/05/28 20:54:51 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
-# include "WrongAnimal.hpp"
+#include "include/Dog.hpp"
+#include "include/Cat.hpp"
 
-class WrongCat: public WrongAnimal
+int main()
 {
-public:
-	void	makeSound(void) const;
-	WrongCat(void);
-	WrongCat(const WrongCat& cat);
-	~WrongCat(void);
-	WrongCat& operator=(const WrongCat& cat);
-
-};
-
-#endif
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	delete j;
+	delete i;
+	
+	return 0;
+}

@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 16:21:38 by kbaek             #+#    #+#             */
-/*   Updated: 2022/05/26 19:14:53 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/05/28 19:13:52 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 
 	//const std::string&	getType(void);
 	std::string getType(void) const;
-	virtual void		makeSound(void);
+	virtual void		makeSound(void) const;
 };
 
 #endif

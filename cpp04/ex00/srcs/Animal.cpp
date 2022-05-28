@@ -6,11 +6,11 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 19:06:59 by kbaek             #+#    #+#             */
-/*   Updated: 2022/05/26 19:37:58 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/05/28 20:19:36 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Animal.hpp"
+#include "../include/Animal.hpp"
 
 Animal::Animal(void)
 	: type("Animal")
@@ -20,8 +20,8 @@ Animal::Animal(void)
 
 Animal::Animal(const Animal& ani)
 {
-	*this = ani;
 	std::cout << "Animal's Copy Constructor called." << std::endl;
+	*this = ani;
 }
 Animal::~Animal(void)
 {
@@ -41,7 +41,7 @@ std::string Animal::getType(void) const
 	return this->type;
 }
 
-void	Animal::makeSound(void)
+void	Animal::makeSound(void) const
 {
-	std::cout << "This is Animal sound" << std::endl;
+	std::cout << "[Animal sound...]" << std::endl;
 }

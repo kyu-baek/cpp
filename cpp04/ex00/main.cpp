@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 16:18:44 by kbaek             #+#    #+#             */
-/*   Updated: 2022/05/28 20:23:09 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/06/14 19:48:46 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@ int main()
 	std::cout << "\n1. UpCasting\n" << std::endl;
 	
 	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
+	const Animal* d = new Dog();
+	const Animal* c = new Cat();
+	std::cout << d->getType() << " " << std::endl;
+	std::cout << c->getType() << " " << std::endl;
+	c->makeSound();
+	d->makeSound();
 	meta->makeSound();
 
 	delete meta;
-	delete i;
-	delete j;
+	delete d;
+	delete c;
 
 
 	std::cout << "\n\n2. Normal Casting\n" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 19:38:40 by kbaek             #+#    #+#             */
-/*   Updated: 2022/05/28 20:19:58 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/06/14 21:54:36 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ void	WrongCat::makeSound(void) const
 {
 	std::cout << "[lejkfsljf....]" << std::endl;
 }
-
+Brain* WrongCat::getBrain(void)
+{
+	return (brain);
+}
 WrongCat::WrongCat(void)
 	: WrongAnimal()
 {

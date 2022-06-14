@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 20:24:28 by kbaek             #+#    #+#             */
-/*   Updated: 2022/05/28 22:36:23 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/06/14 21:39:13 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ public:
 	Brain& operator=(const Brain &brain);
 	~Brain(void);
 
-	std::string getIdeas(void) const;
-	void setIdeas(std::string ideas);
-
+	std::string const *getIdeas(void) const;
+	void setIdeas(std::string const *ideas);
+	void	insideBrain(void);
 };
 
 #endif

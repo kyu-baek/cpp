@@ -6,13 +6,16 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 16:18:44 by kbaek             #+#    #+#             */
-/*   Updated: 2022/05/28 22:46:28 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/06/14 21:55:32 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/Dog.hpp"
 #include "include/Cat.hpp"
 #include "include/Brain.hpp"
+#include "include/WrongCat.hpp"
+
+
 
 int main()
 {
@@ -46,10 +49,13 @@ int main()
 		
 	std::cout << "----------DeepCopy Testing----------" << std::endl;
 
-
     Dog* DogOrigin = new Dog();
     Brain* DogOriginBrain = DogOrigin->getBrain();
-    DogOriginBrain->setIdeas("Dogs always love their owner");
+	std::string DogIdeas[100];
+
+	for (int i = 0; i <100; i++)
+		DogIdeas[i] = "Dogs always love their owner ";
+    DogOriginBrain->setIdeas(DogIdeas);
 
     Dog* DogCopy = new Dog(*DogOrigin);
 
@@ -59,24 +65,28 @@ int main()
     std::cout << DogCopy->getBrain()->getIdeas() << std::endl;
 
     delete DogOrigin;
+	 DogCopy->getBrain()->insideBrain();
     delete DogCopy;
   
     Cat* CatOrigin = new Cat();
     Brain* CatOriginBrain = CatOrigin->getBrain();
-    CatOriginBrain->setIdeas("Cat needs house keeper, not owner");
+	std::string CatId[100];
+
+	for (int i = 0; i <100; i++)
+		CatId[i] = "Cat needs house keeper, not owner ";
+
+    CatOriginBrain->setIdeas(CatId);
     Cat* CatCopy = new Cat(*CatOrigin);
 
     std::cout << "----------Originl Brain----------\n";
     std::cout << CatOrigin->getBrain()->getIdeas() << std::endl;
     std::cout << "----------Copied Brain----------\n";
     std::cout << CatCopy->getBrain()->getIdeas() << std::endl;
+	std::cout << "\n";
 
     delete CatOrigin;
+	// CatCopy->getBrain()->insideBrain();
     delete CatCopy;
 
-
-
-
-	
 	return 0;
 }

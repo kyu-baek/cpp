@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 21:26:33 by kbaek             #+#    #+#             */
-/*   Updated: 2022/05/28 22:07:51 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/06/14 21:38:55 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 Brain::Brain(void)
 {
 	std::cout << "Brain's Default Constructor called." << std::endl;
+	for (int i = 0; i < 100; i++)
+		_ideas[i] = "aa";
 
 }
 Brain::Brain(const Brain &brain)
@@ -38,17 +40,28 @@ Brain::~Brain(void)
 
 }
 
-std::string Brain::getIdeas(void) const
+// std::string* Brain::getIdeas(void) const
+// {
+// 	return _ideas;
+// }
+
+std::string const *Brain::getIdeas(void) const
 {
-	return *_ideas;
+	return _ideas;
 }
 
-void Brain::setIdeas(std::string *ideas)
+void Brain::setIdeas(const std::string *ideas)
 {	
 	for (int i = 0; i < 100; i++)
-		this->_ideas[i] = ideas[i];
-
-	// for (int i = 0; i < 100; i++)
-	// 	if (!ideas[i].empty())
-	// 		this->_ideas[i] = ideas[i];
+		if (!ideas[i].empty())
+			this->_ideas[i] = ideas[i];
 }
+
+void	Brain::insideBrain(void)
+{
+	for (int count = 0; count < 100 && !_ideas[count].empty(); count++)
+	{
+		std::cout << _ideas[count] << std::endl;
+	}
+}
+// std::string Brain::getIdeas(void) const { return this->_ideas[0]; }

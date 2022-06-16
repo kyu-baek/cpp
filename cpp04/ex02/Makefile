@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/05/19 19:41:58 by kbaek             #+#    #+#              #
-#    Updated: 2022/06/16 16:12:42 by kbaek            ###   ########.fr        #
+#    Created: 2022/06/16 16:17:34 by kbaek             #+#    #+#              #
+#    Updated: 2022/06/16 16:17:36 by kbaek            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,6 @@ SRCS		= main.cpp \
 				srcs/Cat.cpp \
 				srcs/Animal.cpp \
 				srcs/Brain.cpp \
-
-
 
 
 OBJS		= $(SRCS:.cpp=.o)

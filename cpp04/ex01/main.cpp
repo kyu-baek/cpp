@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 16:18:44 by kbaek             #+#    #+#             */
-/*   Updated: 2022/06/16 18:07:20 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/06/16 19:00:00 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ int main()
 
     std::cout << "----------Originl Brain----------\n";
     std::cout << DogOrigin->getBrain()->getIdeas() << std::endl;
+	DogOrigin->makeSound();
+	std::cout << DogOrigin->getType() << std::endl;
     std::cout << "----------Copied Brain----------\n";
     std::cout << DogCopy->getBrain()->getIdeas() << std::endl;
 

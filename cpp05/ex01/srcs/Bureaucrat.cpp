@@ -1,14 +1,14 @@
 
-#include "Bureaucrat.hpp"
+#include "../include/Bureaucrat.hpp"
 
 const char *Bureaucrat::GradeTooHighException::what(void) const throw()
 {
-	return ("GradeTooHighException called");
+	return ("Bureaucrat::GradeTooHighException called");
 }
 
 const char *Bureaucrat::GradeTooLowException::what(void) const throw()
 {
-	return ("GradeTooLowException called");
+	return ("Bureaucrat::GradeTooLowException called");
 }
 
 Bureaucrat::Bureaucrat(void)
@@ -74,9 +74,15 @@ void	Bureaucrat::decrementGrade(void)
 		throw Bureaucrat::GradeTooLowException();
 }
 
+std::string						Bureaucrat::signForm(Form &form)
+{
+
+}
+
+
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &bure)
 {
   os << "<" << bure.getName() << ">, bureaucrat grade <" << bure.getGrade()
      << ">.";
-  return os;
+  return (os);
 }

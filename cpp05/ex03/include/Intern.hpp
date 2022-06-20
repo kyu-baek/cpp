@@ -21,7 +21,7 @@ public:
 	Intern &operator=(const Intern &intern);
 	~Intern(void);
 
-	Form *makeForm(const std::string &form, const std::string &target);
+	Form *makeForm(const std::string &form, std::string target);
 
 	class UnformedException: public std::exception
 	{

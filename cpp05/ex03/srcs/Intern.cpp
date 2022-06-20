@@ -1,4 +1,4 @@
-#include "Intern.hpp"
+#include "../include/Intern.hpp"
 
 Intern::Intern(void)
 {}
@@ -16,5 +16,42 @@ Intern &Intern::operator=(const Intern &intern)
 
 Intern::~Intern(void){}
 
-Form *Intern::makeForm(const std::string &form, const std::string &target)
-{}
+Form* Intern::makeShrubberyForm(std::string& target)
+{
+	return (new ShrubberyCreationForm(target));
+}
+
+Form* Intern::makeRobotomyForm(std::string& target)
+{
+	return (new RobotomyRequestForm(target));
+}
+
+Form* Intern::makePresidentialForm(std::string& target)
+{
+	return (new PresidentialPardonForm(target));
+}
+
+const char *Intern::UnformedException::what(void) const throw()
+{
+	return ("Inter:: Form name doesn’t exist");
+}
+
+Form *Intern::makeForm(const std::string &form, std::string target)
+{
+	std::string list[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
+	Form *(Intern::*formPtr[3])(std::string&) = {&Intern::makeShrubberyForm, &Intern::makeRobotomyForm, &Intern::makePresidentialForm};
+	std::string *ptr = std::find(list, list + 3, form);
+	int i = ptr - list;
+	if (i >=0 && i <= 2)
+	{
+		std::cout << "Intern creates <" << list[i] << ">" << std::endl;
+		return	((this->*(formPtr[i]))(target));
+	}
+	else
+	{
+		throw Intern::UnformedException();
+		//std::cout << "Intern::Form name doesn’t exist" << std::endl;
+		// return (NULL);
+	}
+
+}

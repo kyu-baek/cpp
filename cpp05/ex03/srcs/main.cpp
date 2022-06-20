@@ -14,60 +14,82 @@
 #include "../include/ShrubberyCreationForm.hpp"
 #include "../include/RobotomyRequestForm.hpp"
 #include "../include/PresidentialPardonForm.hpp"
+#include "../include/Intern.hpp"
+
+
 
 int main(void)
 {
+	std::cout << "\n" << "---------------Simple Form Test---------------" <<std::endl;
+
+	Bureaucrat kyu("kyu", 1);
 	try
 	{
-		Bureaucrat kyu("kyu", 1);
 		std::cout << kyu << std::endl;
-		std::cout << "\n" <<"-------------- ShrubberyCreationForm Test--------------------" << std::endl;
-		ShrubberyCreationForm sc("ShrubberyCreation");
-		kyu.signForm(sc);
-		kyu.executeForm(sc);
 
-		std::cout << "\n"  << "-------------- RobotomyRequestForm Test--------------------" << std::endl;
-		RobotomyRequestForm rr("RobotomyRequest");
-		kyu.signForm(rr);
-		kyu.executeForm(rr);
-
-		std::cout << "\n" << "-------------- PresidentialPardonForm Test--------------------" << std::endl;
-		PresidentialPardonForm pp("PresidentialPardon");
-		kyu.signForm(pp);
-		kyu.executeForm(pp);
+		Intern someRandomIntern;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		kyu.signForm(*rrf);
+		kyu.executeForm(*rrf);
+		delete rrf;
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << e.what();
+		std::cerr << e.what() << '\n';
 	}
 
 
-	std::cout << "\n\n\n";
+	std::cout << "\n" << "---------------Every Form Test---------------" <<std::endl;
+
 
 	try
 	{
-		Bureaucrat sumin("sumin", 10);
+		Bureaucrat sumin("sumin", 20);
 		std::cout << sumin << std::endl;
-		std::cout << "\n" <<"--------------Simple ShrubberyCreationForm Test--------------------" << std::endl;
-		ShrubberyCreationForm sc("ShrubberyCreation");
-		sumin.signForm(sc);
-		sumin.executeForm(sc);
+		
+		Intern intern;
+		Form *ps = intern.makeForm("shrubbery creation", "ps");
+		Form *pr= intern.makeForm("robotomy request", "ps");
+		Form *pp= intern.makeForm("presidential pardon", "ps");
 
-		std::cout << "\n"  << "--------------Simple RobotomyRequestForm Test--------------------" << std::endl;
-		RobotomyRequestForm rr("RobotomyRequest");
-		sumin.signForm(rr);
-		sumin.executeForm(rr);
+		sumin.signForm(*ps);
+		sumin.signForm(*pr);
+		sumin.signForm(*pp);
 
-		std::cout << "\n" << "--------------Simple PresidentialPardonForm Test--------------------" << std::endl;
-		PresidentialPardonForm pp("PresidentialPardon");
-		sumin.signForm(pp);
-		sumin.executeForm(pp);
+		sumin.executeForm(*ps);
+		sumin.executeForm(*pr);
+		sumin.executeForm(*pp);
+		delete ps;
+		delete pr;
+		delete pp;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+
+	std::cout << "\n" << "---------------Wrong Form Test---------------" <<std::endl;
+
+	try
+	{
+		std::cout << kyu << std::endl;
+
+		Intern someRandomIntern;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("Worng form", "Bender");
+		kyu.signForm(*rrf);
+		kyu.executeForm(*rrf);
+		delete rrf;
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
 	
+
+
 
 	return 0;
 

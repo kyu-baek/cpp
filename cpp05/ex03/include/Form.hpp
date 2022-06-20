@@ -21,7 +21,7 @@ public:
 	Form(const std::string name, const int gradeToSign, const int gradeToExcute);
 	Form(const Form& form);
 	Form& operator=(const Form& form);
-	~Form(void);
+	virtual ~Form(void);
 
 	const std::string&			getName(void) const;
 	bool							   getSign(void) const;

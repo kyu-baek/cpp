@@ -14,9 +14,9 @@
 NAME		= a.out
 CC			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
-SRCS		= main.cpp \
-				Bureaucrat.cpp \
-				Form.cpp \
+SRCS		= srcs/main.cpp \
+				srcs/Bureaucrat.cpp \
+				srcs/Form.cpp \
 
 
 

@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 
 #include "../include/Bureaucrat.hpp"
+#include "../include/Form.hpp"
 
 int main(void)
 {
-
 	std::cout << "--------------Simple Exception Test--------------------" << std::endl;
 	try 
 	{
@@ -26,52 +26,42 @@ int main(void)
 		std::cout << e.what() << std::endl;
 	}
 
+
+
+
+	std::cout << "\n" << "---------------Form Exception Test---------------------" << std::endl;
 	try
 	{
-		Bureaucrat kyu151("kyu151", 151);
-		std::cout << kyu151 << std::endl;
+		Form tex("tex", 0, 155);
 	}
-	catch (std::exception &e)
+	catch(const std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << '\n';
 	}
 
-	std::cout << "\n";
-	std::cout << "--------------Increment  Test--------------------" << std::endl;
 
+
+	std::cout << "\n"<<"---------Form with Bureucrat Exception Test---------------" << std::endl;
 	try
 	{
-		Bureaucrat cal("cal", 150);
-		std::cout << cal << std::endl;
-		for (int i = 0; i < 150; i++) 
-		{
-			std::cout << i << "'st incrementing" << std::endl;
-			cal.incrementGrade();
-			std::cout << cal << "\n" << std::endl;
-		}
-	}
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-
-	std::cout << "\n";
-	std::cout << "--------------Decrement  Test--------------------" << std::endl;
-	try 
-	{
-		Bureaucrat sumin("sumin", 1);
+		Bureaucrat sumin("sumin", 30);
 		std::cout << sumin << std::endl;
-		for (int i = 0; i < 150; i++) 
-		{
-			std::cout << i << "'st decrementing" << std::endl;
-			sumin.decrementGrade();
-			std::cout << sumin << "\n" << std::endl;
-		}
-	} 
-	catch (std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
 
-	return (0);
+		Bureaucrat sumin2("sumin2", 10);
+		std::cout << sumin2 << std::endl;
+		Form tex("tex", 20, 15);
+		std::cout << tex << std::endl;
+
+		sumin.signForm(tex);
+		std::cout << tex << std::endl;
+		sumin2.signForm(tex);
+		std::cout << tex << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
+	return 0;
 }
+

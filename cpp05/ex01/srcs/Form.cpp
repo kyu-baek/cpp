@@ -3,12 +3,12 @@
 
 const char *Form::GradeTooHighException::what(void) const throw()
 {
-	return ("Form::GradeTooHighException called");
+	return ("Form::Grade Too High");
 }
 
 const char * Form::GradeTooLowException::what(void) const throw()
 {
-	return ("Form::GradeTooLowException called");
+	return ("Form::Grade Too Low");
 }
 
 Form::Form(void)
@@ -65,11 +65,11 @@ int								     Form::getGradeToExcute(void) const
 	return (_gradeToExcute);
 }
 
-void								Form::beSigned(Bureaucrat bure)
+void	Form::beSigned(Bureaucrat const &bure)
 {
-	if (bure.getGrade() > getGradeToSign())
+	if (bure.getGrade() > this->getGradeToSign())
 	{
-		throw Form::GradeTooLowException();
+		throw Form::GradeTooHighException();
 	}
 	else 
 		this->_sign = true;
@@ -78,6 +78,12 @@ void								Form::beSigned(Bureaucrat bure)
 
 std::ostream &operator<<(std::ostream &os, const Form &form)
 {
-	os << "<" << form.getName() << "form getSign <" << form.getSign() << ">, form gradeToSign <" << form.getGradeToSign() << "> form gradeToExcute <" << form.getGradeToExcute() << ">.";
+	std::string sign;
+	if (form.getSign())
+		sign = "true";
+	else
+		sign = "false";
+
+	os << "<" << form.getName() << "> form getSign <" << sign << ">, form gradeToSign <" << form.getGradeToSign() << "> form gradeToExcute <" << form.getGradeToExcute() << ">.";
 	return (os);
 }

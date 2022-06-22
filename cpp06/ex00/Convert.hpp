@@ -16,14 +16,14 @@ class Convert
 private:
 	const std::string	_strInput;
 	const double		_doubleInput;
-	Convert(void);
 public:
+	Convert(void);
 	Convert(const std::string &str);
 	Convert(const Convert& con);
 	Convert& operator=(const Convert &con);
 	~Convert(void);
 
-	const double	getInput(void) const;
+	const double	getDoubleInput(void) const;
 
 	char	toChar(void);
 	int			toInt(void);
@@ -34,7 +34,7 @@ public:
 	void	printInt() const;
 	void	printDouble() const;
 	void	printFloat() const;
-	void	printNum(const std::string num) const;
+
 
 };
 

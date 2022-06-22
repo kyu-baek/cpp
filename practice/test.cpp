@@ -1,4 +1,11 @@
 
+/*
+
+static_cast<바꾸려고 하는 타입>(대상);
+
+*/
+
+
 int main()
 {
 	try

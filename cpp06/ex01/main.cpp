@@ -10,8 +10,9 @@ int	main()
 
 	uintptr_t serial = serialize(dataToSerial);
 	std::cout << "\n-----Serialized Adrr----\n\n";
-	std::cout << "serial Hex: " << std::hex << serial << std::dec << std::endl;
-	std::cout << "serial    : " << &serial << std::endl;
+	std::cout << "serial addr	      : " << &serial << std::endl;
+	std::cout << "serial data addr      : " << serial << std::endl;
+	std::cout << "serial Hex  data addr : " << std::hex << serial << std::dec << std::endl;
 
 	Data* dataToDeserial = deserialize(serial);
 	std::cout << "\n----Deserialized Adrr----\n\n";

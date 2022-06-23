@@ -5,17 +5,24 @@
 
 
 # include <string>
-# include <cmath>				//isnan(), isinf()
+# include <cmath>	//isnan isinf
 # include <cctype>
 # include <iomanip>
 # include <limits>
+/*
+ -isnan() isinf()
 
+ nan 이나 inf 는 floating point 연산을 할 때 잘못된 연산에 의해 발생하는 것, 
+ 0 으로 나누거나 숫자가 아닌 것으로 나누려 할 때 발생하는 에러. 
+ 그 이외에도 꽤 많다. exp 가 over-flow 가 발생하거나, 
+ log(0) 이거나, 여러 원인에 의하여 제대로 계산할 수 없을 경우 반환되는 값.
+*/
 
 class Convert
 {
 private:
-	const std::string	_strInput;
-	const double		_doubleInput;
+	double		_double;
+
 public:
 	Convert(void);
 	Convert(const std::string &str);
@@ -23,18 +30,10 @@ public:
 	Convert& operator=(const Convert &con);
 	~Convert(void);
 
-	const double	getDoubleInput(void) const;
-
-	char	toChar(void);
-	int			toInt(void);
-	double	toDouble(void);
-	float		toFloat(void);
-
 	void	printChar() const;
 	void	printInt() const;
 	void	printDouble() const;
 	void	printFloat() const;
-
 
 };
 

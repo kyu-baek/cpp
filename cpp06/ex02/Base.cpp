@@ -3,11 +3,6 @@
 #include <ctime>
 //Base class
 
-Base::Base(void)
-{
-	std::cout << "Base generated" << std::endl;
-}
-
 Base::~Base(void)
 {
 	std::cout << "Base destructed" << std::endl;

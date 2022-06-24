@@ -6,6 +6,10 @@ int	main()
 	std::cout << "\n-----Make Data Struct----\n\n";
 	Data*			dataToSerial = new Data(2022, "Hot Summer");
 	std::cout << *dataToSerial <<std::endl;
+	std::cout << "\n-----Serialized Adrr----\n\n";
+	std::cout << "dataToSerial addr	      : " << &dataToSerial << std::endl;
+	std::cout << "dataToSerial data addr      : " << dataToSerial << std::endl;
+	std::cout << "dataToSerial Hex  data addr : " << std::hex << dataToSerial << std::dec << std::endl;
 
 
 	uintptr_t serial = serialize(dataToSerial);
@@ -18,7 +22,7 @@ int	main()
 	std::cout << "\n----Deserialized Adrr----\n\n";
 	std::cout << *dataToDeserial << std::endl;
 
-	std::cout << std::boolalpha << " ptr == ptr2 is " << (dataToSerial == dataToDeserial) << std::endl;
+	std::cout << std::boolalpha << " ptr = ptr2 is " << (dataToSerial == dataToDeserial) << std::endl;
 
 	delete dataToSerial;
 	return 0;

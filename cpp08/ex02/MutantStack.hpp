@@ -7,6 +7,7 @@
 #include <stack>
 #include <iterator>
 #include <algorithm>
+#include <functional>
 
 template <typename T>
 class MutantStack : public std::stack<T>
@@ -28,15 +29,15 @@ public:
 	};
 	~MutantStack(void) {};
 
-	iterator begin(void) { return (this->c.begin()) };
-	iterator end(void) { return (this->c.end()) };
-	iterator rbegin(void) { return (this->c.rbegin()) };
-	iterator rend(void) { return (this->c.rend()) };
+	iterator begin(void) { return (this->c.begin()); };					//첫번째 원소를 가리킴
+	iterator end(void) { return (this->c.end()); };						//마지막의 다음 원소를 가리킴
+	reverse_iterator rbegin(void) { return (this->c.rbegin()); };			//맨 마지막 원소를 마치 첫 번째 원소처럼 역으로 가리킴
+	reverse_iterator rend(void) { return (this->c.rend()); };				//맨 첫 원소의 앞을 마지막 원소의 다음처럼 가리킴.
 
-	const_iterator begin(void) const { return (this->c.begin()) };
-	const_iterator end(void) const { return (this->c.end()) };
-	const_iterator rbegin(void) const { return (this->c.rbegin()) };
-	const_iterator rend(void) const { return (this->c.rend()) };
+	const_iterator begin(void) const { return (this->c.begin()); };
+	const_iterator end(void) const { return (this->c.end()); };
+	const_reverse_iterator rbegin(void) const { return (this->c.rbegin()); };
+	const_reverse_iterator rend(void) const { return (this->c.rend()); };
 };
 
 

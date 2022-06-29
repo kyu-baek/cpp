@@ -8,6 +8,7 @@
 #include <iterator>
 #include <algorithm>
 #include <functional>
+#include <list>
 
 template <typename T>
 class MutantStack : public std::stack<T>

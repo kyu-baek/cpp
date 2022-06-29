@@ -17,7 +17,7 @@ int main()
 		for (int i = 0; i < NUM; i++)
 			v.push_back(i);
 		std::vector<int>::iterator iter;
-		for (int j = 0; j < NUM + 1; j++)
+		for (int j = 0; j < NUM + 1; j++) //at 15th Error
 		{
 			iter = easyfind(v, j);
 			std::cout<< j << ". easyfind Success, [" <<  *iter <<  "]" << std::endl;
@@ -45,7 +45,7 @@ int main()
 			iter++;
 		}
 		std::cout << "\n";
-		iter = easyfind(d, 15);
+		iter = easyfind(d, 15); //Error
 	
 	}
 	catch(const std::exception& e)

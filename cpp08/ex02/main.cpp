@@ -52,5 +52,34 @@ int main()
    	for (itR=mstack.rbegin();itR!=mstack.rend();itR++) 
 		std::cout << *itR << std::endl;
 
+
+	std::cout << "\n\n4. list Test\n" << std::endl;
+	std::list<int> list;
+
+	list.push_back(0);
+	list.push_back(1);
+	list.push_back(2);
+	list.push_back(3);
+
+	std::cout << "Top is " << list.front() << "  Size is " << list.size() << std::endl;
+
+	list.pop_front();
+
+	std::cout << "Top is " << list.front() << "  Size is " << list.size()  << std::endl;
+
+	std::list<int> clist(list);
+
+	std::list<int>::iterator itL = clist.begin();
+	std::list<int>::iterator iteL = clist.end();
+	std::cout << '\n';
+
+	++itL;
+	--itL;
+	while (itL != iteL)
+	{
+		std::cout << *itL << std::endl;
+		++itL;
+	}
+
 	return 0;
 }

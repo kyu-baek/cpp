@@ -18,11 +18,11 @@ public:
 	Span &operator=(const Span &sp);
 	~Span(void);
 
-	void				addNumber(const unsigned int number);
+	void			addNumber(const unsigned int number);
 	unsigned int	shortestSpan(void);
 	unsigned int	longestSpan(void);
-	void				makeV(unsigned int s);
-	void				printV(void);
+	void			makeV(unsigned int s);
+	void			printV(void);
 
 	class NoSpeaceStore : public std::exception
 	{
